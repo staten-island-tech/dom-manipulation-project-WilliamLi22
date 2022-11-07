@@ -8,7 +8,15 @@
 const DOMSelectors = {
   button: document.getElementById("btn"),
   text: document.querySelector("#text"),
-  point: document.querySelectorAll(".point"),
+  points: document.querySelectorAll(".point"),
+  box: document.getElementById("big-black-box"),
 };
 
-console.log(DOMSelectors.point);
+function backgroundAndText(background, text) {
+  background.style.backgroundColor = "red";
+  text.textContent = "This is now a big bigger red box";
+  text.style.fontSize = "40px";
+  //https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index use for more properties
+}
+
+backgroundAndText(DOMSelectors.box, DOMSelectors.text);
