@@ -19,4 +19,18 @@ function backgroundAndText(background, text) {
   //https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index use for more properties
 }
 
-backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+DOMSelectors.button.addEventListener("click", function () {
+  backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+});
+
+function changeLi() {
+  let pointIndex = 1;
+  DOMSelectors.points.forEach((point) => {
+    point.addEventListener("click", function () {
+      point.textContent = `Hello I am point ${pointIndex}`;
+      pointIndex++;
+    });
+  });
+}
+
+changeLi();
