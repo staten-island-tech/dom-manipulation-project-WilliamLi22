@@ -5,6 +5,30 @@
 //-Create a function that clears the input fields after injecting the object
 //-Create a function to remove an object after they have been created
 
+const DOMSelectors = {
+  button: document.getElementById("btn"),
+  box: document.getElementById("container-box"),
+  input: document.querySelector(`#input`),
+};
+
+/* const cat = "meow";
+
+DOMSelectors.box.insertAdjacentHTML(
+  "beforebegin",
+  `<h1>We are an ${cat} </h1>`
+);
+ */
+
+const card = DOMSelectors.button.addEventListener("click", function () {
+  let input = DOMSelectors.input.value;
+  DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${input}</p>`);
+  DOMSelectors.input.value = "";
+});
+
+//step one take input and save to variable consolelog to check
+//step two create object from data
+//step three push data into html
+
 /* const DOMSelectors = {
   button: document.getElementById("btn"),
   text: document.querySelector("#text"),
@@ -34,23 +58,3 @@ function changeLi() {
 }
 
 changeLi(); */
-
-const DOMSelectors = {
-  button: document.getElementById("btn"),
-  box: document.getElementById("container-box"),
-  input: document.querySelector(`#input`),
-};
-
-/* const cat = "meow";
-
-DOMSelectors.box.insertAdjacentHTML(
-  "beforebegin",
-  `<h1>We are an ${cat} </h1>`
-);
- */
-
-DOMSelectors.button.addEventListener("click", function () {
-  let input = DOMSelectors.input.value;
-  DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${input}</p>`);
-  DOMSelectors.input.value = "";
-});

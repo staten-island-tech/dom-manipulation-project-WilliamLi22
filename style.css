@@ -7,6 +7,15 @@
     text-align: center;
   } */
 
+
+  html, body, *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%; /* Normally 100% is 16 px we want the size to be 10px so we do 62.5 */
+    font-family: 'Oxygen', sans-serif;
+}
+
   #container-box{
     background-color: black;
     
@@ -16,6 +25,3 @@
     
 }
 
-.cat-poster{
-    width: 10rem;
-}
