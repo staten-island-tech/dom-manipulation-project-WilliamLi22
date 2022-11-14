@@ -8,27 +8,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container-box">
-        <p id="text">We can add more text with input</p>
-        <input type="text" id="input">
-        <button type="button" id="btn">Generate</button>
-    </div>
-
+<h1>About Me</h1>
 <section class="form-parent">
-   <form id="form">
-    <div class="form-inputs">
+   <section id="form">
+    <form class="form-inputs">
         <div class="form-input">
-            <label for="title">
-            <input type="text" id="title" class="text-box" required
+            <label for="name">Name</label>
+            <input type="text" id="name" class="text-box" required>
+            </div>
+            <div class="form-input">
+                <label for="likes">Your likes</label>
+                <input type="text" id="url" class="text-box" required>
+            </div>
+            <div class="form-input">
+                <label for="dislikes">Your dislikes</label>
+                <input type="text" id="url" class="text-box" required>
+            </div>
+            <div class="form-input">
+                <label for="url">Enter Image URL Here</label>
+                <input type="submit" value="Submit" class="btn">
+            </div>
+        </form>
+    </section>
+</section class="display" id="display">
 
-            </label>
-        </div>
-    </div>
-
-   </form>
-</section>
-
-
-    <script src="index.js" ></script>
+<script src="index.js" ></script>
 </body>
 </html>

@@ -6,55 +6,20 @@
 //-Create a function to remove an object after they have been created
 
 const DOMSelectors = {
-  button: document.getElementById("btn"),
-  box: document.getElementById("container-box"),
-  input: document.querySelector(`#input`),
+  name: document.getElementById("name"),
+  likes: document.getElementById("likes"),
+  dislikes: document.getElementById("dislikes"),
+  url: document.getElementById("url"),
+  display: document.getElementById("display"),
+  submit: document.querySelector("#form"),
 };
 
-/* const cat = "meow";
-
-DOMSelectors.box.insertAdjacentHTML(
-  "beforebegin",
-  `<h1>We are an ${cat} </h1>`
-);
- */
-
-const card = DOMSelectors.button.addEventListener("click", function () {
-  let input = DOMSelectors.input.value;
-  DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${input}</p>`);
-  DOMSelectors.input.value = "";
+DOMSelectors.submit.addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log(e);
 });
 
+function makeCard() {}
 //step one take input and save to variable consolelog to check
 //step two create object from data
 //step three push data into html
-
-/* const DOMSelectors = {
-  button: document.getElementById("btn"),
-  text: document.querySelector("#text"),
-  points: document.querySelectorAll(".point"),
-  box: document.getElementById("big-black-box"),
-};
-
-function backgroundAndText(background, text) {
-  background.style.backgroundColor = "red";
-  text.textContent = "This is now a big bigger red box";
-  text.style.fontSize = "40px";
-  //https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index use for more properties
-}
-
-DOMSelectors.button.addEventListener("click", function () {
-  backgroundAndText(DOMSelectors.box, DOMSelectors.text);
-});
-
-function changeLi() {
-  let pointIndex = 1;
-  DOMSelectors.points.forEach((point) => {
-    point.addEventListener("click", function () {
-      point.textContent = `Hello I am point ${pointIndex}`;
-      pointIndex++;
-    });
-  });
-}
-
-changeLi(); */
