@@ -6,12 +6,13 @@
 //-Create a function to remove an object after they have been created
 
 const DOMSelectors = {
-  name: document.getElementById("name"),
-  likes: document.getElementById("likes"),
-  dislikes: document.getElementById("dislikes"),
+  name: document.querySelector("#name"),
+  likes: document.querySelector("#likes"),
+  dislikes: document.querySelector("#dislikes"),
   url: document.getElementById("url"),
   display: document.getElementById("display"),
   submit: document.querySelector("#form"),
+  text: document.querySelector("#text"),
 };
 
 DOMSelectors.submit.addEventListener("submit", function (e) {
@@ -20,6 +21,11 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
 });
 
 function makeCard() {}
+
+/* DOMSelectors.submit.addEventListener("submit", function () {
+  makeCard(DOMSelectors.display, DOMSelectors.text);
+}); */
+
 //step one take input and save to variable consolelog to check
 //step two create object from data
 //step three push data into html

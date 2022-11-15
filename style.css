@@ -1,16 +1,19 @@
-/* #big-black-box {
+html, body, *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1rem; /* Normally 100% is 16 px we want the size to be 10px so we do 62.5 */
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+ /* #big-black-box {
     background-color: black;
   
     font-size: 2vh;
     color: cornsilk;
     height: 100vh;
     text-align: center;
-  } */
+  } 
 
-  html, body, *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 1rem; /* Normally 100% is 16 px we want the size to be 10px so we do 62.5 */
-    font-family: 'Oxygen', sans-serif;
-}
+ */
