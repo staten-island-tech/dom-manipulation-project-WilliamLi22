@@ -17,10 +17,30 @@ const DOMSelectors = {
 
 DOMSelectors.submit.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log(e);
+  let name = DOMSelectors.name.value;
+  let Character = {};
+  Character.name = name;
+  console.log(Character);
+
+  let likes = DOMSelectors.likes.value;
+  let characterLikes = {};
+  characterLikes.likes = likes;
+  console.log(characterLikes);
+
+  let dislikes = DOMSelectors.dislikes.value;
+  let characterDislikes = {};
+  characterDislikes.dislikes = dislikes;
+  console.log(characterDislikes);
 });
 
+document.getElementById("name");
+
 function makeCard() {}
+//make the card
+//get delete button
+//querySelectorAll returns node list
+//for each button add event listener
+// function(e) event.target
 
 /* DOMSelectors.submit.addEventListener("submit", function () {
   makeCard(DOMSelectors.display, DOMSelectors.text);
