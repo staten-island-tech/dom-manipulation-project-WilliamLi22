@@ -31,11 +31,22 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
   let characterDislikes = {};
   characterDislikes.dislikes = dislikes;
   console.log(characterDislikes);
+
+  DOMSelectors.name.value = "";
+  DOMSelectors.likes.value = "";
+  DOMSelectors.dislikes.value = "";
+  DOMSelectors.url.value = "";
 });
 
 document.getElementById("name");
 
-function makeCard() {}
+DOMSelectors.display.insertAdjacentHTML("afterend");
+
+function makeCard() {
+  DOMSelectors.submit.addEventListener("submit", function (e) {});
+}
+
+makeCard();
 //make the card
 //get delete button
 //querySelectorAll returns node list
