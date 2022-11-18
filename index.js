@@ -17,6 +17,7 @@ const DOMSelectors = {
 
 DOMSelectors.submit.addEventListener("submit", function (e) {
   e.preventDefault();
+
   let name = DOMSelectors.name.value;
   let Character = {};
   Character.name = name;
@@ -40,10 +41,10 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
 
 document.getElementById("name");
 
-DOMSelectors.display.insertAdjacentHTML("afterend", "<h2>Tesing</h2>");
-
 function makeCard() {
-  DOMSelectors.submit.addEventListener("submit", function (e) {});
+  DOMSelectors.submit.addEventListener("submit", function () {
+    DOMSelectors.submit.insertAdjacentHTML("afterend", "<h2>Tesing</h2>");
+  });
 }
 
 makeCard();
