@@ -17,37 +17,41 @@ const DOMSelectors = {
 
 DOMSelectors.submit.addEventListener("submit", function (e) {
   e.preventDefault();
-
   let name = DOMSelectors.name.value;
-  let Character = {};
-  Character.name = name;
-  console.log(Character);
+  let Profile = {};
 
-  let likes = DOMSelectors.likes.value;
-  let characterLikes = {};
-  characterLikes.likes = likes;
-  console.log(characterLikes);
+  Profile.name = name;
 
-  let dislikes = DOMSelectors.dislikes.value;
-  let characterDislikes = {};
-  characterDislikes.dislikes = dislikes;
-  console.log(characterDislikes);
+  Profile.url = DOMSelectors.url.value;
+
+  Profile.likes = DOMSelectors.likes.value;
+
+  Profile.dislikes = DOMSelectors.dislikes.value;
 
   DOMSelectors.name.value = "";
   DOMSelectors.likes.value = "";
   DOMSelectors.dislikes.value = "";
   DOMSelectors.url.value = "";
+
+  console.log(Profile);
+
+  makeCard(Profile);
 });
 
 document.getElementById("name");
 
-function makeCard() {
-  DOMSelectors.submit.addEventListener("submit", function () {
-    DOMSelectors.submit.insertAdjacentHTML("afterend", "<h2>Tesing</h2>");
-  });
+function makeCard(Profile) {
+  DOMSelectors.submit.insertAdjacentHTML(
+    "afterend",
+    `<div class="character-card">
+    <h2>${Profile.name}</h2>
+    <img src="${Profile.url}" alt="">
+    <h3>${Profile.likes}</h3>
+    <h3>${Profile.dislikes}</h3>
+</div>);`
+  );
 }
 
-makeCard();
 //make the card
 //get delete button
 //querySelectorAll returns node list
