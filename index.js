@@ -13,6 +13,7 @@ const DOMSelectors = {
   display: document.getElementById("display"),
   submit: document.querySelector("#form"),
   text: document.querySelector("#text"),
+  remove: document.querySelector("#remove"),
 };
 
 DOMSelectors.submit.addEventListener("submit", function (e) {
