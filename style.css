@@ -15,8 +15,7 @@ html, body, *{
   background-color: bisque;
 }
 
-.profile {
-  width: 50%;
+.character-card {
   display: flex;
   text-align: center;
   width: 25%;
@@ -25,16 +24,5 @@ html, body, *{
   background-color: bisque;
 }
 
-.remobe
+.removeBtn {}
 
-
- /* #big-black-box {
-    background-color: black;
-  
-    font-size: 2vh;
-    color: cornsilk;
-    height: 100vh;
-    text-align: center;
-  } 
-
- */

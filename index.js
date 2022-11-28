@@ -10,9 +10,7 @@ const DOMSelectors = {
   likes: document.querySelector("#likes"),
   dislikes: document.querySelector("#dislikes"),
   url: document.getElementById("url"),
-  display: document.getElementById("display"),
   submit: document.querySelector("#form"),
-  text: document.querySelector("#text"),
   remove: document.querySelector("#remove"),
 };
 
@@ -37,6 +35,7 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
   console.log(Profile);
 
   makeCard(Profile);
+  eraseCard();
 });
 
 document.getElementById("name");
@@ -45,24 +44,20 @@ function makeCard(Profile) {
   DOMSelectors.submit.insertAdjacentHTML(
     "afterend",
     `<div class="character-card">
-    <h2>${Profile.name}</h2>
+    <h2>Name: ${Profile.name}</h2>
     <img src="${Profile.url}" alt="">
-    <h3>${Profile.likes}</h3>
-    <h3>${Profile.dislikes}</h3>
-</div>);`
+    <h3>Likes: ${Profile.likes}</h3>
+    <h3>Dislikes: ${Profile.dislikes}</h3>
+    <button class="removeBtn">Remove</button></div>
+    </div>);`
   );
 }
 
-//make the card
-//get delete button
-//querySelectorAll returns node list
-//for each button add event listener
-// function(e) event.target
-
-/* DOMSelectors.submit.addEventListener("submit", function () {
-  makeCard(DOMSelectors.display, DOMSelectors.text);
-}); */
-
-//step one take input and save to variable consolelog to check
-//step two create object from data
-//step three push data into html
+function eraseCard() {
+  const remove = document.querySelectorAll(".removeBtn");
+  remove.forEach((formValue) => {
+    formValue.addEventListener("click", (e) => {
+      e.target.parentElement.remove();
+    });
+  });
+}
