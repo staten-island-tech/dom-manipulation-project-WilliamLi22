@@ -65,7 +65,7 @@ function eraseCard() {
 let removeButtons = document.querySelectorAll(".remove");
 removeButtons.forEach((button) => {
   button.addEventListener("click", function (e) {
-    e.target.parentElement.remove();
+    e.target.remove();
   });
 });
 
