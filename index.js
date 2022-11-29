@@ -49,7 +49,7 @@ function makeCard(Profile) {
     <h3>Likes: ${Profile.likes}</h3>
     <h3>Dislikes: ${Profile.dislikes}</h3>
     <button class="removeBtn">Remove</button></div>
-    </div>);`
+    </div>`
   );
 }
 
@@ -61,3 +61,12 @@ function eraseCard() {
     });
   });
 }
+
+let removeButtons = document.querySelectorAll(".remove");
+removeButtons.forEach((button) => {
+  button.addEventListener("click", function (e) {
+    e.target.parentElement.remove();
+  });
+});
+
+//list of things, itterate over the list with forEach
