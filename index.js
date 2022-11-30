@@ -20,11 +20,8 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
   let Profile = {};
 
   Profile.name = name;
-
   Profile.url = DOMSelectors.url.value;
-
   Profile.likes = DOMSelectors.likes.value;
-
   Profile.dislikes = DOMSelectors.dislikes.value;
 
   DOMSelectors.name.value = "";
@@ -48,7 +45,7 @@ function makeCard(Profile) {
     <img src="${Profile.url}" alt="">
     <h3>Likes: ${Profile.likes}</h3>
     <h3>Dislikes: ${Profile.dislikes}</h3>
-    <button class="removeBtn">Remove</button></div>
+    <button class="removeBtn">Remove</button>
     </div>`
   );
 }
@@ -62,11 +59,11 @@ function eraseCard() {
   });
 }
 
-let removeButtons = document.querySelectorAll(".remove");
+/* let removeButtons = document.querySelectorAll(".remove");
 removeButtons.forEach((button) => {
   button.addEventListener("click", function (e) {
-    e.target.remove();
+    e.Profile.remove();
   });
-});
+}); */
 
 //list of things, itterate over the list with forEach
