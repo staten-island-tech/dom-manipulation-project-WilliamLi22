@@ -24,16 +24,19 @@ DOMSelectors.submit.addEventListener("submit", function (e) {
   Profile.likes = DOMSelectors.likes.value;
   Profile.dislikes = DOMSelectors.dislikes.value;
 
-  DOMSelectors.name.value = "";
-  DOMSelectors.likes.value = "";
-  DOMSelectors.dislikes.value = "";
-  DOMSelectors.url.value = "";
-
   console.log(Profile);
 
   makeCard(Profile);
   eraseCard();
+  clearField();
 });
+
+function clearField() {
+  DOMSelectors.name.value = "";
+  DOMSelectors.likes.value = "";
+  DOMSelectors.dislikes.value = "";
+  DOMSelectors.url.value = "";
+}
 
 document.getElementById("name");
 
